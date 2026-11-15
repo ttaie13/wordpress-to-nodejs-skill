@@ -1,0 +1,11 @@
+name: PHP lint
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint plugin
+        run: php -l wordpress-plugin/wp-node-migration/wp-node-migration.php
+      - name: Compile Python scanner
+        run: python -m py_compile .claude/skills/wordpress-to-nodejs/scripts/scan-wordpress.py

@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+*.sql
+*.sql.gz
+*.zip
+wp-content/uploads/
+wp-config.php
+public-content.json
+*content-export*.json
+.DS_Store
